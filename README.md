@@ -1,9 +1,7 @@
 # pyftp
 This is a simple python ftp client for the command line interface.
 
-Note: Note tested on windows
-
-fetch & checkout a branch!
+Note: This script has not been tested on windows, tested on Ubuntu 16.04
 
 ## How to
 ```
@@ -40,5 +38,9 @@ run()
 ```
 Runs the ftp client
 
-# Issues
+## Issues
 Not tested in windows, mac
+
+## Contribution
+
+Feel free to clone, pull checkout a branch or drop an email to [mxmandela@gmail.com](mailto:mxmandela@gmail.com)
