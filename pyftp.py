@@ -5,18 +5,42 @@ import ftplib
 import os
 import config
 
-host = raw_input('Hostname: ')
-user = raw_input('Username: ')
-password = raw_input('Password: ')
+
+def make_connection_uri():
+    uri = raw_input('Enter connection the URI(server:user@password): ')
+    host = uri.split(':')[0]
+    username = uri.split(':')[1].split('@')[0]
+    password = uri.split(':')[1].split('@')[1]
+
+    print "Connecting.."
+
+    try:
+        ftp = ftplib.FTP(host, username, password)
+        print "Connection established"
+        return ftp
+    except Exception, err:
+        print "Connection error %s:" % (str(err))
+        return False
 
 
 def make_connection():
+    host = raw_input('Hostname: ')
+    user = raw_input('Username: ')
+    password = raw_input('Password: ')
+
     try:
         ftp = ftplib.FTP(host or config.host, user or config.user, password or config.password)
         return ftp
     except Exception, err:
         print "Connection error %s:" % (str(err))
         return False
+
+
+def connection_method():
+    connection_option = input('Pick a way to connect(1. URI, 2. Host, Password, User): ')
+    if connection_option == 1:
+        return make_connection_uri()
+    return make_connection()
 
 
 def get_files(con, directory):
@@ -42,15 +66,15 @@ def upload(con, file_path):
 
 
 def run():
-    print "Making a connection to server.."
-    if make_connection():
-        con = make_connection()
+    con = connection_method()
+
+    if con:
         directory = raw_input('Enter upload directory/path: ')
         directory = directory or config.directory
         file_path = raw_input('Enter file path: ')
 
-        print "Connection made!"
         print "Files in %s:" % directory
+
         get_files(con, directory)
 
         try:
