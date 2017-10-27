@@ -1,5 +1,9 @@
 # pyftp
-This is a simple python ftp client
+This is a simple python ftp client for the command line interface.
+
+Note: Note tested on windows
+
+fetch & checkout a branch!
 
 ## How to
 ```
