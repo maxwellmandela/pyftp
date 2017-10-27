@@ -3,24 +3,24 @@ This is a simple python ftp client
 
 ## How to
 ```
-    import ftplib, os
-    import config # Config variables py file
+import ftplib, os
+import config # Config variables py file
 ```
 ### make connection
 ```
-    make_connection()
+make_connection()
 ```
 Makes a connection with parameters: host, username, password
 
 ### make connection_uri
 ```
-    make_connection_uri()
+make_connection_uri()
 ```
 Makes a connection from uri string: [host]:[username]@[password]
 
 ### get files(connection, dir)
 ```
-    get_files(connection, dir)
+get_files(connection, dir)
 ```
 Lists files in a directory
 
