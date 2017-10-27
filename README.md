@@ -43,4 +43,4 @@ Not tested in windows, mac
 
 ## Contribution
 
-Feel free to clone, pull checkout a branch or drop an email to [mxmandela@gmail.com](mailto:mxmandela@gmail.com)
+Feel free to clone, open a pull request or drop an email to [mxmandela@gmail.com](mailto:mxmandela@gmail.com)
