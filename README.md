@@ -1,5 +1,6 @@
 # pyftp
-This is a simple python ftp client for the command line interface.
+This is a simple python ftp client for the command line interface(cli).
+It helps great when you are facing cpanel with no ssh otherwise you probabaly don't need it
 
 Note: This script has not been tested on windows, tested on Ubuntu 16.04
 
